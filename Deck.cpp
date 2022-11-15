@@ -7,7 +7,7 @@ Deck::Deck()
 
 void Deck::addCard(Card* card)
 {
-	deck[index++] = *card;
+	deck[index++] = card;
 }
 
 void Deck::shuffle()
@@ -16,3 +16,15 @@ void Deck::shuffle()
 		std::swap(deck[i], deck[random(0, index)]);
 	}
 }
+
+Card* Deck::getCard(int i)
+{
+	return deck[i];
+}
+
+int Deck::getSize()
+{
+	return index;
+}
+
+
